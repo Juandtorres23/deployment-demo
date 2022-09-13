@@ -9,7 +9,7 @@ app.use(express.json());
 
 //Middleware 
 app.use(express.static(path.join(__dirname, "../public")));
-app.use("/styles", express.static(path.join(__dirname, "../public/index.css")));
+// app.use("/styles", express.static(path.join(__dirname, "../public/index.css")));
 
 //only need one or the other middleware/endpoints
 

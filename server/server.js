@@ -12,7 +12,7 @@ app.get("/", function (req, res) {
 });
 
 app.get("/styles", function(req, res) {
-    rmSync.sendFile(path.join(__dirname, "../public/index.css"));
+    res.sendFile(path.join(__dirname, "../public/index.css"));
 });
 
 const port = process.env.PORT || 4005;

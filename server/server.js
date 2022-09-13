@@ -1,13 +1,18 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
+const { rmSync } = require("fs");
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
 app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "../index.html"));
+    res.sendFile(path.join(__dirname, "../public/index.html"));
+});
+
+app.get("/styles", function(req, res) {
+    rmSync.sendFile(path.join(__dirname, "../public/indix.css"));
 });
 
 const port = process.env.PORT || 4005;
